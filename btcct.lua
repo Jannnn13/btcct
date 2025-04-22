@@ -14,7 +14,10 @@ local rc = {}
 
 -- Load rc file if it exists
 if fs.exists("/.btcct.rc.lua") then
-    rc = require("/.btcct.rc.lua")
+    local rcFile = dofile("/.btcct.rc.lua")
+    if type(rcFile) == "table" then
+        rc = rcFile
+    end
 end
 
 -- Configuration with defaults

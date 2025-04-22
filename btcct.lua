@@ -32,7 +32,7 @@ local cfg = {
 }
 
 term.setTextColor(cfg.term_secondary_color)
-print(cfg.about_text)
+if cfg.about_text then print(cfg.about_text) end
 
 if cfg.start_dir then shell.setDir(cfg.start_dir) end
 

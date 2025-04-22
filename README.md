@@ -11,7 +11,7 @@ BTCCT (Better Terminal for CC: Tweaked) is an enhanced terminal emulator program
 - Display of version information
 
 ## Installation
-1. Ensure [CC: Tweaked](https://github.com/cc-tweaked/cc-tweaked) is installed.
+1. Ensure [CC: Tweaked](https://modrinth.com/mod/cc-tweaked) is installed.
 2. Download the `btcct.lua` file and save it in the desired directory on your ComputerCraft computer.
 3. (Optional) Create a configuration file `.btcct.rc.lua` in the root directory with your custom settings.
 
@@ -37,7 +37,7 @@ BTCCT supports a configuration file `.btcct.rc.lua` with the following options:
 3. Exit the program using the `exit` command.
 
 ## Author
-Created by [Jannnn13](https://github.com/Jannnn13).
+Created by [Jannnn13](https://github.com/Jannnn13), on 4.22.2025.
 
 ## License
 This project is licensed under the [MIT License](LICENSE).

@@ -37,6 +37,9 @@ print(cfg.about_text)
 if cfg.start_dir then shell.setDir(cfg.start_dir) end
 
 while true do
+    term.setTextColor(cfg.term_color)
+    if cfg.written_top then print(cfg.written_top) end
+
     term.setTextColor(cfg.term_secondary_color)
     
     if shell.dir() == "/" or not cfg.show_path then

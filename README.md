@@ -8,7 +8,7 @@ BTCCT (Better Terminal for CC: Tweaked) is an enhanced shell for [CC: Tweaked](h
 
 ## Features
 
-- Customizable prompt (`written`, `written_top`)
+- Customizable prompt (`prompt`)
 - Support for auto-completion
 - Customizable colors (`term_color`, `term_secondary_color`)
 - Display of the current directory in the prompt
@@ -24,16 +24,24 @@ BTCCT (Better Terminal for CC: Tweaked) is an enhanced shell for [CC: Tweaked](h
 
 ## Configuration
 
-BTCCT supports a configuration file `.btcct.rc.lua` with the following options:
+BTCCT supports a configuration file `/.btcct/rc.lua` with the following options:
 
-| Option                | Description                                      | Default Value         |
-|-----------------------|--------------------------------------------------|-----------------------|
-| `written`             | Prompt text                                      | `"%DIR%> "`           |
-| `term_color`          | Prompt text color                                | `colors.white`        |
-| `term_secondary_color`| Secondary text color                             | `colors.blue`         |
-| `multishell_title`    | Multishell window title                          | `nil`                 |
-| `about_text`          | Text displayed on startup                        | `os.version()`        |
-| `start_dir`           | Start directory                                  | `nil`                 |
+| Option                | Description                                       | Default Value         |
+|-----------------------|---------------------------------------------------|-----------------------|
+| `prompt`              | Prompt text                                       | `"#DIR#> "`           |
+| `term_color`          | Prompt text color                                 | `colors.white`        |
+| `term_secondary_color`| Secondary text color                              | `colors.blue`         |
+| `multishell_title`    | Multishell window title                           | `nil`                 |
+| `about_text`          | Text displayed on startup                         | `os.version()`        |
+| `start_dir`           | Start directory                                   | `nil`                 |
+| `path_on_root`        | If the #DIR# should be cleaned, when you are in / | `false`               |
+
+BTCCT also supports scripts (in the .btcct folder), which are ran automatic:
+
+| Script         | When it is executed    |
+|----------------|------------------------|
+| `b4-prompt.lua`| Before the prompt text |
+| `on-exit.lua`  | On exit                |
 
 ## Usage
 

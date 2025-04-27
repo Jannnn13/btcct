@@ -27,7 +27,8 @@ local cfg = {
     term_secondary_color = rc.term_secondary_color or colors.blue, -- The secondary terminal color
     multishell_title = rc.multishell_title or nil, -- The Multishell title of this program
     about_text = rc.about_text or os.version(), -- The about text when this program is started, if nil it doesnt show
-    start_dir = rc.start_dir or nil, -- The starting directory, if nil it will be the default
+    start_dir = rc.start_dir or nil, -- The starting directory, if nil, it will be the default
+    path_on_root = rc.path_on_root or false, -- If the the path should not be empty in folder /
 }
 
 -- Set the Multishell default title
@@ -47,9 +48,14 @@ while true do
     -- Runs b4-prompt
     if fs.exists("/.btcct/b4-prompt.lua") then shell.run("/.btcct/b4-prompt.lua") end
 
-    -- Replace %DIR% with the directory
+    -- Replace #DIR# with the directory
     local wr_text = cfg.prompt:gsub("#DIR#", shell.dir())
     
+    -- Empty out the wr_text, if you are in / and path_on_root is disabled
+    if cfg.path_on_root and shell.dir() == "/" or "" then
+        wr_text = cfg.prompt:gsub("#DIR#", "")
+    end
+
     -- Prints the text without starting a new line
     write(wr_text)
 

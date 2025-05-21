@@ -6,9 +6,6 @@
     License: MIT License
 ]]
 
-local msid = multishell.getCurrent()
-multishell.setTitle(msid, "BTCCT")
-
 -- Define rc as an empty table by default
 local rc = {}
 
@@ -25,13 +22,9 @@ local cfg = {
     prompt = rc.prompt or "#DIR#> ", -- The text for the prompt
     term_color = rc.term_color or colors.white, -- The terminal color
     term_secondary_color = rc.term_secondary_color or colors.blue, -- The secondary terminal color
-    multishell_title = rc.multishell_title or nil, -- The Multishell title of this program
     about_text = rc.about_text or os.version(), -- The about text when this program is started, if nil it doesnt show
     start_dir = rc.start_dir or nil, -- The starting directory, if nil it will be the default
 }
-
--- Set the Multishell default title
-if cfg.multishell_title then multishell.setTitle(msid, cfg.multishell_title) end
 
 -- Prints the about_text
 term.setTextColor(cfg.term_secondary_color)

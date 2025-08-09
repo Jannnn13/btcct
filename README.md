@@ -2,10 +2,6 @@
 
 BTCCT (Better Terminal for CC: Tweaked) is an enhanced shell for [CC: Tweaked](https://github.com/cc-tweaked/cc-tweaked), a popular Minecraft mod that enables computer-based automation.
 
-> [!WARNING]  
-> BTCCT is still highly in developement, dont use it yet.
-> Star this Repository and come back in 2-3 days.
-
 ## Features
 
 - Customizable prompt (`prompt`)
